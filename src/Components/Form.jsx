@@ -9,7 +9,6 @@ const Form = () => {
     email: '',
     password: '',
     message: '',
-    image: '',
   });
 
 
@@ -32,7 +31,6 @@ const Form = () => {
       email: Details.email,
       password: Details.password,
       message: Details.message,
-      image: Details.image,
     }, 
     'xPHTlVkYQ7KWHpt8c'
   )
@@ -47,12 +45,11 @@ const Form = () => {
         email: '',
         password: '',
         message: '',
-        image: '',
       });
     },
     (error) => {
       console.log('FAILED...', error);
-      alert('Failed to send message, please try again.');
+      alert('Failed to Submit form, please try again.');
     }
   );
 
@@ -142,19 +139,6 @@ const Form = () => {
             className="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
           />
         </label>
-
-        <label className="block">
-          <span className="text-gray-700">Image:</span>
-          <input
-            onChange={handleInput}
-            required
-            type="file"
-            name="image"
-            value={Details.image}
-            className="mt-1 block w-full text-gray-500 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none"
-          />
-        </label>
-
         <button
           type="submit"
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-200"
